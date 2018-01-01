@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <base href="/events/admin/"> -->
+	<!-- <base href="/"> -->
+	<title> Login </title>
+	<!-- Bootstrap -->
+	<link href="libs/css/bootstrap.min.css" rel="stylesheet">
+	<link href="cust/css/style.css" rel="stylesheet"> 
+	<!-- <link href="libs/css/toaster.min.css" rel="stylesheet"> -->
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="container" ng-controller="mCtrl">
+		
+
+		<div class="row headCont">
+			<div class="col-md-6 col-sm-6" >
+				<h3 class="text-center"> My Profile </h3>
+			</div> 
+						<span ng-if="isAuth == true">
+			<div class="col-md-1 col-md-offset-1 col-sm-6" style="margin-top:1%">
+				<button type="button" class="btn btn-danger" ng-click="logout()"> Logout </button>
+			</div>
+			<div class="col-md-2 col-sm-6" style="margin-top:1%">
+				<button type="button" class="btn btn-danger" ng-click="changePassword()">Change Password </button>
+			</div>
+			</span>
+
+		</div>
+		
+
+
+		<div class="row bodyCont">
+			<ui-view></ui-view>
+		</div>
+
+		<div class="row footCont">
+			 <span> &nbsp; {{isAuth}}
+ </span> 
+		</div>
+
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+		<!-- Angular -->
+		<script src="libs/js/jquery.min.js"></script>
+		<script src="libs/js/angular.min.js"></script>
+		<script src="libs/js/toaster.min.js"></script>
+		<script src="libs/js/angular-ui-router.js"></script>
+		<!-- <script src="libs/js/angular-cookies.js"></script> -->
+		<script src="libs/js/bootstrap.min.js"></script>
+		<script src="libs/js/ui-bootstrap-tpls-2.4.0.min.js"></script>
+		<script src="libs/js/angular-local-storage.min.js"></script>
+		<script src="libs/js/oclazyload/ocLazyLoad.min.js"></script>
+
+		<script src="cust/js/app.js"></script>
+		<script src="cust/js/AuthJs.js"></script>
+<!-- 		<script src="cust/js/Login.js"></script>
+		<script src="cust/js/homeCtrl.js"></script>
+		<script src="cust/js/Login.js"></script>
+	-->
+</body>
+</html>
